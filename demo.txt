@@ -1,0 +1,166 @@
+   {/* Right Card: Enhanced Graphic Layout */}
+            <div className="relative overflow-hidden rounded-[24px] bg-white p-6 shadow-2xl border border-white/20">
+              
+              {/* Dynamic Header: Visual Pour & Metrics */}
+              <div className="relative mb-5 overflow-hidden rounded-2xl bg-gradient-to-br from-sky-50 via-white to-sky-50/50 p-4 border border-sky-100 shadow-sm">
+                
+                {/* Background Fluid Graphic Wave */}
+                <div 
+                  className="absolute bottom-0 left-0 right-0 bg-sky-200/30 transition-all duration-500 ease-out"
+                  style={{ height: `${Math.min(quantity * 18, 100)}%` }}
+                />
+
+                <div className="relative z-10 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-md text-primary border border-sky-100">
+                      <span className="text-2xl">{currentVariant.icon}</span>
+                      <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white">
+                        <Droplets size={10} />
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+                        <Sparkles size={11} /> Morning Dispatch
+                      </span>
+                      <p className="font-heading text-lg font-bold text-text">
+                        {quantity} Liter{quantity > 1 ? "s" : ""} / Day
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-right">
+                    <p className="text-[10px] uppercase tracking-wider text-text-secondary font-bold">Total</p>
+                    <p className="font-heading text-2xl font-black text-primary">₹{totalPrice}</p>
+                  </div>
+                </div>
+
+                {/* Graphical Nutritional Tags */}
+                <div className="relative z-10 mt-3 flex items-center justify-between border-t border-sky-100/80 pt-2.5 text-[11px]">
+                  <span className="flex items-center gap-1 font-semibold text-text-secondary">
+                    <Flame size={12} className="text-amber-500" /> Fat Content: <strong className="text-text">{currentVariant.fat}</strong>
+                  </span>
+                  <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${currentVariant.accentBg} ${currentVariant.textColor}`}>
+                    {currentVariant.badge}
+                  </span>
+                </div>
+              </div>
+
+              {/* Step 1: Variant Selection with Graphics */}
+              <div className="mb-4">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-text-secondary flex justify-between items-center">
+                  <span>1. Choose Breed & Type</span>
+                  <span className="text-[10px] text-primary font-semibold">100% Organic</span>
+                </label>
+                
+                <div className="mt-2 grid grid-cols-2 gap-2.5">
+                  {Object.keys(variantSpecs).map((type) => {
+                    const spec = variantSpecs[type];
+                    const isSelected = milkType === type;
+                    return (
+                      <button
+                        key={type}
+                        type="button"
+                        onClick={() => setMilkType(type)}
+                        className={`relative flex flex-col items-start rounded-xl p-3 text-left transition-all border ${
+                          isSelected
+                            ? "bg-primary/5 border-primary shadow-sm ring-1 ring-primary/20"
+                            : "bg-gray-50 border-gray-100 hover:bg-gray-100/80 text-text-secondary"
+                        }`}
+                      >
+                        {isSelected && (
+                          <CheckCircle2 size={14} className="absolute top-2 right-2 text-primary" />
+                        )}
+                        <span className="text-xl mb-1">{spec.icon}</span>
+                        <span className={`text-xs font-bold ${isSelected ? "text-primary" : "text-text"}`}>
+                          {type}
+                        </span>
+                        <span className="text-[10px] font-medium text-text-secondary mt-0.5">
+                          ₹{spec.price}/L • {spec.protein}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Step 2: Quantity Counter */}
+              <div className="mb-4">
+                <div className="flex items-center justify-between">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+                    2. Daily Quantity
+                  </label>
+                  <span className="text-xs font-bold text-primary">₹{currentVariant.price}/Liter</span>
+                </div>
+                
+                <div className="mt-2 flex items-center justify-between rounded-xl bg-gray-50 p-2 border border-gray-200/70">
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-white shadow-sm text-text transition active:scale-95 hover:bg-gray-100 border border-gray-100"
+                  >
+                    <Minus size={16} />
+                  </button>
+                  
+                  <div className="text-center">
+                    <span className="font-heading text-xl font-bold text-text">
+                      {quantity}
+                    </span>
+                    <span className="ml-1 text-xs text-text-secondary font-medium">Liters</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-white shadow-sm text-text transition active:scale-95 hover:bg-gray-100 border border-gray-100"
+                  >
+                    <Plus size={16} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Step 3: Frequency Selector */}
+              <div className="mb-5">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+                  3. Delivery Schedule
+                </label>
+                <div className="mt-2 flex gap-1.5 rounded-xl bg-gray-100 p-1">
+                  {["Daily", "Alternate", "One-time"].map((freq) => (
+                    <button
+                      key={freq}
+                      type="button"
+                      onClick={() => setFrequency(freq)}
+                      className={`flex-1 rounded-lg py-1.5 text-[11px] font-bold transition-all ${
+                        frequency === freq
+                          ? "bg-white text-primary shadow-sm"
+                          : "text-text-secondary hover:text-text"
+                      }`}
+                    >
+                      {freq}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Order Button */}
+              <button
+                onClick={handleWhatsApp}
+                className="group flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-bold text-white transition-all hover:bg-primary-dark shadow-lg shadow-primary/20 active:scale-[0.99]"
+              >
+                <MessageCircle size={18} />
+                Order via WhatsApp
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </button>
+
+              <a
+                href="#delivery"
+                className="mt-3 flex items-center justify-center gap-1.5 py-1 text-xs font-semibold text-text-secondary hover:text-primary transition-colors"
+              >
+                <MapPin size={13} />
+                Check delivery route & timings
+              </a>
+
+            </div>

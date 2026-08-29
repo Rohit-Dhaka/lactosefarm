@@ -128,34 +128,7 @@ export default function HowOrderingWorks() {
 
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-6 flex flex-col gap-4 rounded-[24px] border border-primary/10 bg-primary/5 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-
-          <div>
-
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
-              Ready to start?
-            </p>
-
-            <h3 className="mt-1 font-heading text-2xl text-text">
-              Check if we deliver to you.
-            </h3>
-
-          </div>
-
-          <a
-            href="#delivery"
-            className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-primary px-5 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary-dark hover:shadow-soft"
-          >
-            Check Delivery Area
-
-            <ArrowRight
-              size={17}
-              className="transition-transform duration-200 group-hover:translate-x-1"
-            />
-          </a>
-
-        </div>
+    
 
       </div>
     </section>

@@ -3,9 +3,7 @@ import {
   Clock3,
   Droplets,
   FlaskConical,
-  RotateCcw,
-  ArrowRight,
-  MessageCircle,
+  RotateCcw,    
   BadgeCheck,
 } from "lucide-react";
 
@@ -134,33 +132,59 @@ export default function WhyLactoseFarm() {
             {/* Intro */}
             <div className="relative overflow-hidden bg-primary p-7 text-white sm:p-10 lg:p-12">
 
-              <span className="absolute -bottom-14 -right-5 font-heading text-[220px] leading-none text-white/[0.08]">
-                Q
+                <div className="">
+
+            <div className="flex items-center justify-between">
+
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <BadgeCheck
+                  size={24}
+                  className="text-primary"
+                  strokeWidth={1.7}
+                />
+              </div>
+
+              <span className="font-heading text-6xl leading-none text-primary/10">
+                F
               </span>
 
-              <div className="relative z-10">
+            </div>
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15">
-                  <ShieldCheck
-                    size={24}
-                    strokeWidth={1.7}
-                  />
-                </div>
+            <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+              Regulatory Information
+            </p>
 
-                <p className="mt-10 text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
-                  Product Label
+            <h3 className="mt-2 font-heading text-3xl text-white sm:text-4xl">
+              FSSAI Registration
+            </h3>
+
+            <p className="mt-3 max-w-md text-sm leading-6 text-white/70">
+              Display the exact FSSAI registration information
+              from the business certificate.
+            </p>
+
+            <div className="mt-6 flex items-center justify-between rounded-2xl bg-[#F3F8FF] px-5 py-4">
+
+              <div>
+
+                <p className="text-[10px] font-bold uppercase tracking-wider text-text-secondary">
+                  FSSAI Reg. No.
                 </p>
 
-                <h3 className="mt-3 max-w-sm font-heading text-3xl leading-tight sm:text-4xl">
-                  Four things worth knowing.
-                </h3>
-
-                <p className="mt-5 max-w-sm text-sm leading-7 text-white/70">
-                  These product statements are presented on the
-                  Lactose Farm buffalo milk packaging.
+                <p className="mt-1 text-sm font-bold text-text">
+                  To be confirmed
                 </p>
 
               </div>
+
+              <BadgeCheck
+                size={22}
+                className="text-primary"
+              />
+
+            </div>
+
+          </div>
 
             </div>
 
@@ -223,149 +247,7 @@ export default function WhyLactoseFarm() {
         {/* =====================================================
             FSSAI + PRODUCT INFORMATION
         ====================================================== */}
-        <div className="mt-6 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-
-          {/* FSSAI */}
-          <div className="relative overflow-hidden rounded-[30px] bg-white border border-border p-7 sm:p-9">
-
-            <div className="flex items-center justify-between">
-
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <BadgeCheck
-                  size={24}
-                  className="text-primary"
-                  strokeWidth={1.7}
-                />
-              </div>
-
-              <span className="font-heading text-6xl leading-none text-primary/10">
-                F
-              </span>
-
-            </div>
-
-            <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Regulatory Information
-            </p>
-
-            <h3 className="mt-2 font-heading text-3xl text-text sm:text-4xl">
-              FSSAI Registration
-            </h3>
-
-            <p className="mt-3 max-w-md text-sm leading-6 text-text-secondary">
-              Display the exact FSSAI registration information
-              from the business certificate.
-            </p>
-
-            <div className="mt-6 flex items-center justify-between rounded-2xl bg-[#F3F8FF] px-5 py-4">
-
-              <div>
-
-                <p className="text-[10px] font-bold uppercase tracking-wider text-text-secondary">
-                  FSSAI Reg. No.
-                </p>
-
-                <p className="mt-1 text-sm font-bold text-text">
-                  To be confirmed
-                </p>
-
-              </div>
-
-              <BadgeCheck
-                size={22}
-                className="text-primary"
-              />
-
-            </div>
-
-          </div>
-
-          {/* Product Info */}
-          <div className="rounded-[30px] border border-border bg-white p-7 sm:p-9">
-
-            <div className="flex items-start justify-between gap-5">
-
-              <div>
-
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  Product Information
-                </p>
-
-                <h3 className="mt-2 font-heading text-3xl text-text sm:text-4xl">
-                  Buffalo Milk
-                </h3>
-
-              </div>
-
-              <span className="hidden rounded-full bg-primary/10 px-4 py-2 text-xs font-bold text-primary sm:block">
-                FARM FRESH
-              </span>
-
-            </div>
-
-            <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
-
-              <div className="bg-white p-5">
-
-                <p className="text-xs text-text-secondary">
-                  500 ML
-                </p>
-
-                <div className="mt-1 flex items-baseline gap-2">
-
-                  <span className="font-heading text-3xl text-primary">
-                    ₹45
-                  </span>
-
-                  <span className="text-xs text-text-secondary">
-                    per bottle
-                  </span>
-
-                </div>
-
-              </div>
-
-              <div className="bg-white p-5">
-
-                <p className="text-xs text-text-secondary">
-                  1000 ML
-                </p>
-
-                <div className="mt-1 flex items-baseline gap-2">
-
-                  <span className="font-heading text-3xl text-primary">
-                    ₹90
-                  </span>
-
-                  <span className="text-xs text-text-secondary">
-                    per bottle
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-
-              <span className="rounded-full border border-border px-3 py-1.5 text-xs font-medium text-text-secondary">
-                500 ML
-              </span>
-
-              <span className="rounded-full border border-border px-3 py-1.5 text-xs font-medium text-text-secondary">
-                1000 ML
-              </span>
-
-              <span className="rounded-full border border-border px-3 py-1.5 text-xs font-medium text-text-secondary">
-                Buffalo Milk
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
+      
 
         {/* =====================================================
             HANDLING
@@ -451,50 +333,7 @@ export default function WhyLactoseFarm() {
 
         </div>
 
-        {/* =====================================================
-            CTA
-        ====================================================== */}
-        <div className="relative mt-16 overflow-hidden rounded-[30px] bg-primary p-7 text-white sm:p-9 lg:p-10">
-
-          <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-
-            <div>
-
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
-                Have questions?
-              </p>
-
-              <h3 className="mt-2 font-heading text-2xl sm:text-3xl">
-                Talk to Lactose Farm directly.
-              </h3>
-
-              <p className="mt-2 max-w-xl text-sm leading-6 text-white/70">
-                Ask about product availability, delivery, or
-                anything you want to confirm before ordering.
-              </p>
-
-            </div>
-
-            <button
-              onClick={handleWhatsApp}
-              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-white px-6 py-3.5 text-sm font-bold text-primary transition-all duration-200 hover:bg-[#F3F8FF]"
-            >
-              <MessageCircle size={18} />
-
-              Ask on WhatsApp
-
-              <ArrowRight
-                size={17}
-                className="transition-transform duration-200 group-hover:translate-x-1"
-              />
-            </button>
-
-          </div>
-
-          {/* Decorative circle */}
-          <div className="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full border-[40px] border-white/5" />
-
-        </div>
+    
 
       </div>
     </section>
