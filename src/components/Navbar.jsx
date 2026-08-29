@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Delivery", path: "/delivery" },
 ];
 
-const whatsappNumber = "91XXXXXXXXXX";
+const whatsappNumber = "918080822038";
 
 export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -169,7 +169,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
           </div>
 
           {/* Mobile Bottom CTA Buttons */}
-          <div className="mt-auto space-y-3">
+          <div className="mt-auto space-y-3 mb-10">
             <button
               type="button"
               onClick={handleCartClick}

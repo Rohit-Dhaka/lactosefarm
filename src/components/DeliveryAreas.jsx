@@ -8,7 +8,7 @@ import {
   Truck,
 } from "lucide-react";
 
-const whatsappNumber = "91XXXXXXXXXX";
+const whatsappNumber = "918080822038";
 
 const address =
   "SANTOSHI MATA COLONY, Manak Bhavan, SBI Road, Shivaji Nagar, Karanja Lad, Maharashtra 444105, India";

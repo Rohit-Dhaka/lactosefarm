@@ -1,6 +1,6 @@
 import { X, Trash2, Plus, Minus, MessageCircle, ArrowRight } from "lucide-react";
 
-const whatsappNumber = "91XXXXXXXXXX";
+const whatsappNumber = "918080822038";
 
 export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, onRemoveItem, onClearCart }) {
   if (!isOpen) return null;

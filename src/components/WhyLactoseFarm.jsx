@@ -7,7 +7,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const whatsappNumber = "91XXXXXXXXXX";
+const whatsappNumber = "918080822038";
 
 const handleWhatsApp = () => {
   const message = encodeURIComponent(
