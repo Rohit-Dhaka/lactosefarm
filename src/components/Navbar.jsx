@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, ArrowUpRight, ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
@@ -15,6 +15,20 @@ const whatsappNumber = "91XXXXXXXXXX";
 
 export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Lock/Unlock body scrolling based on mobile drawer state
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
@@ -123,8 +137,8 @@ export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
 
       {/* Mobile Drawer Overlay */}
       <div
-        className={`fixed right-0 top-0 z-10 h-screen w-full bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed left-0 top-0 z-10 h-screen w-full bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >
         <div className="flex h-full flex-col px-5 pb-6 pt-24 sm:px-6">
