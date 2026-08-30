@@ -2,12 +2,12 @@ import { MessageCircle, MapPin, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.jpg";
 
-const whatsappNumber = "91XXXXXXXXXX";
-const phoneNumber = "91XXXXXXXXXX";
+const whatsappNumber = "917015813074";
+const phoneNumber = "917015813074";
 
 const handleWhatsApp = () => {
   const message = encodeURIComponent(
-    "Hello Lactose Farm, I would like to know more about your dairy products."
+    "Hello Yogesh Dairy Farm, I would like to know more about your dairy products."
   );
 
   window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
@@ -33,7 +33,7 @@ export default function Footer() {
             <Link to="/" className="inline-block">
               <img
                 src={Logo}
-                alt="Lactose Farm Logo"
+                alt="Yogesh Dairy Farm Logo"
                 className="h-16 w-16 rounded-full object-cover sm:h-18 sm:w-18"
               />
             </Link>
@@ -92,11 +92,9 @@ export default function Footer() {
                 </div>
 
                 <div>
-                  <p className="text-sm font-medium text-white">Lactose Farm</p>
+                  <p className="text-sm font-medium text-white">Yogesh Dairy Farm</p>
                   <p className="mt-0.5 text-xs sm:text-sm leading-5 text-white/50">
-                    Karanja Lad
-                    <br />
-                    Full address to be confirmed
+                    Kosli                                         
                   </p>
                 </div>
               </div>
@@ -131,7 +129,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-4 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
             {/* Copyright */}
-            <p>© {new Date().getFullYear()} Lactose Farm™. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Yogesh Dairy Farm™. All rights reserved.</p>
 
             {/* Legal Links */}
             <div className="flex flex-wrap gap-5">

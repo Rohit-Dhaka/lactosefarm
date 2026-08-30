@@ -20,7 +20,7 @@ export default function FinalCTA() {
                   <Milk size={18} className="text-white" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">
-                  Lactose Farm
+                  Yogesh Dairy Farm
                 </span>
               </div>
 

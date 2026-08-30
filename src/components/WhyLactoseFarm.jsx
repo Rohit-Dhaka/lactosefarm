@@ -7,11 +7,11 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const whatsappNumber = "918080822038";
+const whatsappNumber = "917015813074";
 
 const handleWhatsApp = () => {
   const message = encodeURIComponent(
-    "Hello Lactose Farm, I would like to know more about your buffalo milk and quality practices."
+    "Hello Yogesh Dairy Farm, I would like to know more about your buffalo milk and quality practices."
   );
 
   window.open(

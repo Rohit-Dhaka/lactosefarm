@@ -12,42 +12,42 @@ const testimonials = [
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
   {
     id: 2,
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
   {
     id: 3,
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
   {
     id: 4,
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
   {
     id: 5,
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
   {
     id: 6,
     name: "Customer Name",
     location: "Locality",
     review:
-      "Approved customer review will appear here once provided by Lactose Farm.",
+      "Approved customer review will appear here once provided by Yogesh Dairy Farm.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Testimonials() {
             What our customers say.
           </h2>
           <p className="mt-4 text-sm leading-6 text-text-secondary sm:text-base">
-            Real experiences from Lactose Farm customers.
+            Real experiences from Yogesh Dairy Farm customers.
           </p>
         </div>
 

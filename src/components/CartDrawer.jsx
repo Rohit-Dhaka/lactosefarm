@@ -1,6 +1,7 @@
 import { X, Trash2, Plus, Minus, MessageCircle, ArrowRight } from "lucide-react";
 
-const whatsappNumber = "918080822038";
+
+const whatsappNumber = "917015813074";
 
 export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, onRemoveItem, onClearCart }) {
   if (!isOpen) return null;
@@ -10,7 +11,7 @@ export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, on
   const handleCheckoutWhatsApp = () => {
     if (cart.length === 0) return;
 
-    let message = "Hello Lactose Farm! I would like to place an order:\n\n";
+    let message = "Hello Yogesh Dairy Farm! I would like to place an order:\n\n";
     cart.forEach((item, index) => {
       message += `${index + 1}. ${item.name} (${item.size}) x ${item.quantity} = ₹${item.unitPrice * item.quantity}\n`;
     });

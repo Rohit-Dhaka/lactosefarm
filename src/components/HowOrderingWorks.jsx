@@ -57,7 +57,7 @@ export default function HowOrderingWorks() {
           </div>
 
           <p className="max-w-lg text-sm leading-7 text-text-secondary sm:text-base lg:ml-auto">
-            Getting your everyday dairy from Lactose Farm is simple.
+            Getting your everyday dairy from Yogesh Dairy Farm is simple.
             Choose what you need, confirm your area, and we'll take
             care of the rest.
           </p>

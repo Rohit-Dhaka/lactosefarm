@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Delivery", path: "/delivery" },
 ];
 
-const whatsappNumber = "918080822038";
+const whatsappNumber = "917015813074";
 
 export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Hello Lactose Farm, I would like to know more about your dairy products and delivery availability."
+      "Hello Yogesh Dairy Farm, I would like to know more about your dairy products and delivery availability."
     );
 
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
@@ -60,11 +60,11 @@ export default function Navbar({ cartCount = 0, onOpenCart, onToggleCart }) {
           to="/home"
           onClick={closeMenu}
           className="group flex items-center"
-          aria-label="Lactose Farm Home"
+          aria-label="Yogesh Dairy Farm Home"
         >
           <img
             src={Logo}
-            alt="Lactose Farm"
+            alt="Yogesh Dairy Farm"
             className="z-20 h-14 w-14 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </NavLink>

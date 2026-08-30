@@ -1,13 +1,13 @@
 import { ArrowRight, MapPin, MessageCircle, Milk } from "lucide-react";
 import Bottal from "../assets/Bottal.png";
-import SmallBottal from "../assets/SmallBottal.png";
+// import SmallBottal from "../assets/SmallBottal.png";
 
-const whatsappNumber = "918080822038";
+const whatsappNumber = "917015813074";
 
 export default function Hero() {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      "Hello Lactose Farm, I would like to know more about your dairy products and delivery availability."
+      "Hello Yogesh Dairy Farm, I would like to know more about your dairy products and delivery availability."
     );
 
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
@@ -39,7 +39,7 @@ export default function Hero() {
             <br />
             <span className="text-primary">straight from</span>
             <br />
-            Lactose Farm.
+            Yogesh Dairy Farm.
           </h1>
 
           {/* Description */}
@@ -86,15 +86,15 @@ export default function Hero() {
 
           {/* Back Bottle */}
           <img
-            src={SmallBottal}
-            alt="Lactose Farm buffalo milk bottle"
+            src={Bottal}
+            alt="Yogesh Dairy Farm buffalo milk bottle"
             className="absolute right-[32%] top-[8%] z-10 h-[430px] w-auto rotate-[-3deg] object-contain drop-shadow-[0_25px_30px_rgba(17,17,17,0.16)] transition-transform duration-500 hover:-translate-y-2"
           />
 
           {/* Front Bottle */}
           <img
             src={Bottal}
-            alt="Lactose Farm buffalo milk"
+            alt="Yogesh Dairy Farm buffalo milk"
             className="absolute right-[-18%] top-[3%] z-20 h-[540px] w-auto rotate-[2deg] object-contain drop-shadow-[0_30px_35px_rgba(17,17,17,0.18)] transition-transform duration-500 hover:-translate-y-2 sm:right-[5%]"
           />
 

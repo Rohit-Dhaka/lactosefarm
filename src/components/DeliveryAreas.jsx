@@ -8,7 +8,7 @@ import {
   Truck,
 } from "lucide-react";
 
-const whatsappNumber = "918080822038";
+const whatsappNumber = "917015813074";
 
 const address =
   "SANTOSHI MATA COLONY, Manak Bhavan, SBI Road, Shivaji Nagar, Karanja Lad, Maharashtra 444105, India";
@@ -34,7 +34,7 @@ export default function DeliveryAreas() {
   const handleWhatsApp = (localityName) => {
     const targetLocality = localityName || selectedArea;
     const message = encodeURIComponent(
-      `Hello Lactose Farm! I would like to check delivery availability and slots for my area: ${targetLocality}.`
+      `Hello Yogesh Dairy Farm! I would like to check delivery availability and slots for my area: ${targetLocality}.`
     );
 
     window.open(
@@ -102,7 +102,7 @@ export default function DeliveryAreas() {
               </div>
 
               <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45">
-                Lactose Farm Main Address
+                Yogesh Dairy Farm Main Address
               </p>
 
               <h3 className="mt-2 font-heading text-3xl leading-tight sm:text-4xl">
